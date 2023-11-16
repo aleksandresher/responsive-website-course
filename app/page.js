@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section>
+      <section className="padding-block-900">
         <div className="container">
           <div className="even-columns">
             <div>
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="padding-block-900">
         <div className="container">
           <div className="even-columns">
             <div>
@@ -71,15 +71,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="carousel">
-        <h2 className="fs-secondary-heading">What they’ve said</h2>
+      <section className="padding-block-700 carousel">
+        <h2 className="fs-secondary-heading fw-bold">What they’ve said</h2>
         <button className="button">Get Started</button>
       </section>
-      <section className="cta | bg-accent-400 text-neutal-100">
+      <section className=" cta | padding-block-700 bg-accent-400 text-neutal-100">
         <div className="container">
           <div className="even-columns">
             <div>
-              <p className="fs-secondary-heading fw-bold">
+              <p className="fs-secondary-heading fw-bold text-white">
                 Simplify how your team works today.
               </p>
             </div>

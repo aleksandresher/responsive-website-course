@@ -19,27 +19,27 @@ const Footer = () => {
             <ul role="list" aria-label="social links">
               <li>
                 <Link href="#" aria-label="facebook">
-                  <Image src={FB} />
+                  <Image src={FB} alt="facebook logo" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="youtube">
-                  <Image src={YT} />
+                  <Image src={YT} alt="youtube logo" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="twitter">
-                  <Image src={TW} />
+                  <Image src={TW} alt="twitter logo" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="pinterest">
-                  <Image src={PT} />
+                  <Image src={PT} alt="pinterest logo" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="instagram">
-                  <Image src={IN} />
+                  <Image src={IN} alt="instagram logo" />
                 </Link>
               </li>
             </ul>
