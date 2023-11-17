@@ -15,7 +15,7 @@ const Header = () => {
   }
   return (
     <section>
-      <header className="primary-header">
+      <header className="primary-header overlay">
         <div className="container">
           <div className="nav-wrapper">
             <Link href="#">
@@ -35,11 +35,11 @@ const Header = () => {
               <span className="visually-hidden">Menu</span>
             </button>
             <nav
-              className={`primary-navigation  ${
-                isVissible ? "ms:flex" : "hidden"
+              className={`primary-navigation ${
+                isVissible ? "vissible" : "hidden"
               }`}
             >
-              <ul role="list" id="primary-navigation">
+              <ul role="list" id="primary-navigation" class="nav-list">
                 <li>
                   <Link href="#">Pricing</Link>
                 </li>
