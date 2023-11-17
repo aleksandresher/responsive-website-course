@@ -124,6 +124,48 @@ svg {
 
 /* Utility classes */
 
+/* navigation */
+
+.primary-header {
+  padding-top: var(--size-700);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav-toggle {
+  display: block;
+  position: fixed;
+  top: var(--size-600);
+  right: var(--size-400);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0.5em;
+}
+
+/* .mobile-nav-toggle .icon-close {
+  display: none;
+}
+.mobile-nav-toggle .icon-close {
+  display: none;
+} */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
 .text-primary-400 {
   color: var(--clr-primary-400);
 }
