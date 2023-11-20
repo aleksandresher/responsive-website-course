@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import logo from "../../public/styles/assets/logo.svg";
 import Link from "next/link";
@@ -6,8 +7,11 @@ import YT from "../../public/styles/assets/icon-youtube.svg";
 import TW from "../../public/styles/assets/icon-twitter.svg";
 import PT from "../../public/styles/assets/icon-pinterest.svg";
 import IN from "../../public/styles/assets/icon-instagram.svg";
+import { useState } from "react";
 
 const Footer = () => {
+  const [inputValue, setInputValue] = useState("");
+  console.log(inputValue);
   return (
     <footer className="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100">
       <div className="container">
@@ -90,7 +94,15 @@ const Footer = () => {
           </div>
           <div className="primary-footer-form">
             <form>
-              <input type="email" placeholder="Updates in your inbox..." />
+              <input
+                type="email"
+                pattern="(v) =>
+                /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v)"
+                placeholder="Updates in your inbox..."
+                className="text-stone-950"
+                value={inputValue}
+                onChange={(event) => setInputValue(event.target.value)}
+              />
               <button className="button">Go</button>
             </form>
             <p>Copyright 2020. All Rights Reserved</p>
