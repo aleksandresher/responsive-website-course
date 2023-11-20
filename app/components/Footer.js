@@ -9,42 +9,54 @@ import IN from "../../public/styles/assets/icon-instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 text-neutral-100">
+    <footer className="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100">
       <div className="container">
-        <div className="even-columns">
-          <div>
+        <div className="primary-footer-wrapper">
+          <div className="primary-footer-logo-social">
             <Link href="#">
               <Image src={logo} alt="Manage" />
             </Link>
-            <ul role="list" aria-label="social links">
+            <ul
+              role="social-list"
+              aria-label="social links"
+              className="flex gap-3"
+            >
               <li>
                 <Link href="#" aria-label="facebook">
-                  <Image src={FB} alt="facebook logo" />
+                  <Image src={FB} alt="facebook logo" className="social-icon" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="youtube">
-                  <Image src={YT} alt="youtube logo" />
+                  <Image src={YT} alt="youtube logo" className="social-icon" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="twitter">
-                  <Image src={TW} alt="twitter logo" />
+                  <Image src={TW} alt="twitter logo" className="social-icon" />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="pinterest">
-                  <Image src={PT} alt="pinterest logo" />
+                  <Image
+                    src={PT}
+                    alt="pinterest logo"
+                    className="social-icon"
+                  />
                 </Link>
               </li>
               <li>
                 <Link href="#" aria-label="instagram">
-                  <Image src={IN} alt="instagram logo" />
+                  <Image
+                    src={IN}
+                    alt="instagram logo"
+                    className="social-icon"
+                  />
                 </Link>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="primary-footer-nav">
             <nav className="footer-nav">
               <ul
                 aria-label="Footer"
@@ -76,12 +88,12 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div>
+          <div className="primary-footer-form">
             <form>
-              <input type="email" />
-              <button>Go</button>
-              <p>Copyright 2020. All Rights Reserved</p>
+              <input type="email" placeholder="Updates in your inbox..." />
+              <button className="button">Go</button>
             </form>
+            <p>Copyright 2020. All Rights Reserved</p>
           </div>
         </div>
       </div>
