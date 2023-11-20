@@ -46,7 +46,12 @@ const Footer = () => {
           </div>
           <div>
             <nav className="footer-nav">
-              <ul aria-label="Footer" role="list">
+              <ul
+                aria-label="Footer"
+                role="list"
+                className="flow"
+                style={{ "--flow-space": "1em" }}
+              >
                 <li>
                   <Link href="#">Home</Link>
                 </li>

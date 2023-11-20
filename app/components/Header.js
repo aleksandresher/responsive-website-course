@@ -7,11 +7,11 @@ import MenuIcon from "../../public/styles/assets/icon-hamburger.svg";
 import CloseIcon from "../../public/styles/assets/icon-close.svg";
 
 const Header = () => {
-  const [isVissible, setIsVissible] = useState(false);
-  const [iconChange, setIconChange] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isIconShown, setIsIconShown] = useState(true);
   function toggleMenu() {
-    setIsVissible((prev) => !prev);
-    setIconChange((prev) => !prev);
+    setIsMenuOpen((prev) => !prev);
+    setIsIconShown((prev) => !prev);
   }
   return (
     <section>
@@ -26,20 +26,16 @@ const Header = () => {
               className="mobile-nav-toggle sm:hidden"
               aria-controls="primary-navigation"
             >
-              {iconChange ? (
-                <Image src={MenuIcon} className="icon-hamburger" />
+              {isIconShown ? (
+                <Image src={MenuIcon} className="icon-hamburger sd:hidden" />
               ) : (
-                <Image src={CloseIcon} className="icon-close" />
+                <Image src={CloseIcon} className="icon-close sd:hidden" />
               )}
 
               <span className="visually-hidden">Menu</span>
             </button>
-            <nav
-              className={`primary-navigation ${
-                isVissible ? "vissible" : "hidden"
-              }`}
-            >
-              <ul role="list" id="primary-navigation" class="nav-list">
+            <nav className="primary-navigation">
+              <ul role="list" id="primary-navigation" className="nav-list">
                 <li>
                   <Link href="#">Pricing</Link>
                 </li>
@@ -57,7 +53,7 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <button className="button" style={{ display: "none" }}>
+            <button className="hidden md:inline-flex button">
               Get Started
             </button>
           </div>
