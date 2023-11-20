@@ -101,7 +101,9 @@ p:not([class]) {
 p[data-width="wide"] {
   max-width: 42ch;
 }
-
+p[data-width="medium"] {
+  max-width: 20ch;
+}
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -179,7 +181,11 @@ body {
   background-color: var(--clr-accent-400);
   box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
 }
-
+.button.secondary {
+  background-color: #fff;
+  color: var(--clr-accent-400); /* Set a contrasting text color */
+  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
+}
 .button[data-type="inverted"] {
   background-color: var(--clr-neutral-100);
   color: var(--clr-accent-400);
@@ -282,6 +288,30 @@ body {
 }
 
 /* Utility classes */
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("../public/styles/assets/bg-tablet-pattern.svg"),
+    url("../public/styles/assets/bg-tablet-pattern.svg");
+  background-position: -3rem -3rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
 
 .visually-hidden {
   position: absolute;

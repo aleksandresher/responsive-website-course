@@ -85,16 +85,19 @@ export default function Home() {
         <h2 className="fs-secondary-heading fw-bold">What they’ve said</h2>
         <button className="button">Get Started</button>
       </section>
-      <section className=" cta | padding-block-700 bg-accent-400 text-neutal-100">
+      <section className=" cta | padding-block-900 bg-accent-400 text-neutal-100">
         <div className="container">
-          <div className="even-columns">
+          <div className="even-columns  md:flex justify-between  ">
             <div>
-              <p className="fs-secondary-heading fw-bold text-white">
+              <p
+                className="fs-secondary-heading fw-bold text-white"
+                data-width="medium"
+              >
                 Simplify how your team works today.
               </p>
             </div>
-            <div>
-              <button className="button" datatype="inverted">
+            <div className="">
+              <button className="button secondary text-color-[#F3603C]">
                 Get Started
               </button>
             </div>
