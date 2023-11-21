@@ -1,6 +1,9 @@
 import Illustration from "../public/styles/assets/illustration-intro.svg";
 import Image from "next/image";
-import styles from "../app/globals.css";
+
+import CarouselPage from "./components/Carousel";
+// import CarouserlTest from "./components/CarouserlTest";
+
 export default function Home() {
   return (
     <main>
@@ -83,10 +86,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="padding-block-700 carousel">
-        <h2 className="fs-secondary-heading fw-bold">What they’ve said</h2>
-        <button className="button">Get Started</button>
-      </section>
+      <CarouselPage />
+
       <section className=" cta | padding-block-900 bg-accent-400 text-neutal-100">
         <div className="container">
           <div className="even-columns  md:flex justify-between  ">
