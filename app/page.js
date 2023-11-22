@@ -7,7 +7,7 @@ import CarouselPage from "./components/Carousel";
 export default function Home() {
   return (
     <main>
-      <section className="padding-block-900">
+      <section className="hero | padding-block-900 text-center-sm-only">
         <div className="container">
           <div className="even-columns">
             <div className="flow">
@@ -20,17 +20,21 @@ export default function Home() {
               </p>
               <button className="button">Get Started</button>
             </div>
-            <div>
-              <Image src={Illustration} alt="bars for decorative purpose" />
+            <div className="hero__image order-first md:order-none">
+              <Image
+                src={Illustration}
+                className="mx-auto"
+                alt="bars for decorative purpose"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="padding-block-900">
+      <section className="sales-points | padding-block-900">
         <div className="container">
           <div className="even-columns">
-            <div className="flow text-center-sm-only">
+            <div className=" flow text-center-sm-only">
               <h2 className="fs-secondary-heading fw-bold">
                 What’s different about Manage?
               </h2>
@@ -86,7 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CarouselPage />
+      {/* <CarouselPage /> */}
 
       <section className=" cta | padding-block-900 bg-accent-400 text-neutal-100">
         <div className="container">

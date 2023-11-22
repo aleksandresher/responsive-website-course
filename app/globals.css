@@ -84,7 +84,8 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -250,6 +251,7 @@ body {
 
 .nav-list {
   display: flex;
+
   gap: clamp(var(--size-400), 5vw, var(--size-700));
   font-weight: var(--fw-semi-bold);
 }
@@ -264,11 +266,15 @@ body {
   color: var(--clr-accent-400);
 }
 
-@media (max-width: 50em) {
+@media (max-width: 47em) {
+  .primary-header[data-overlay] {
+    position: relative;
+    z-index: 999;
+  }
   .primary-navigation {
     display: none;
 
-    position: fixed;
+    margin-inline: auto;
     padding: var(--size-700);
     inset: 7rem var(--size-400) auto;
     max-width: 25rem;
@@ -281,6 +287,7 @@ body {
   .primary-header[data-overlay]::before {
     content: "";
     position: fixed;
+
     inset: 0;
     /* height: 100vh; */
     background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
@@ -628,4 +635,59 @@ input:where([type="text"], [type="email"], ) {
   position: relative;
   top: calc(var(--size-800) / 2);
   margin-inline: auto;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 95%;
+  max-height: 70vh;
+  max-height: 70dvh;
+  aspect-ratio: 1 / 1.2;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-image: url("../public/styles/assets/bg-tablet-pattern.svg");
+}
+@media (min-width: 47em) {
+  .hero__image::before {
+    width: 45%;
+  }
+}
+@media (max-width: 50em) {
+  .text-center-sm-only {
+    text-align: center;
+  }
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.sales-points__blog {
+  position: relative;
+}
+
+.sales-points__blog {
+  content: url("../public/styles/assets/bg-tablet-pattern.svg");
+  position: absolute;
+  zoom: 40%;
+  z-index: -1;
+  left: 70%;
+  bottom: 80%;
+  width: 100px;
+}
+
+@media (min-width: 47em) {
+  .sales-points__blog::before {
+    content: url("../public/styles/assets/bg-tablet-pattern.svg");
+
+    zoom: 80%;
+    z-index: -1;
+    left: -50%;
+    top: 40%;
+    width: 100px;
+  }
 }
