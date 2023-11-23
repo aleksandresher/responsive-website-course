@@ -90,11 +90,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <CarouselPage /> */}
+      <CarouselPage />
 
       <section className=" cta | padding-block-900 bg-accent-400 text-neutal-100">
         <div className="container">
-          <div className="even-columns  md:flex justify-between  ">
+          <div className="even-columns items-center md:flex justify-between  ">
             <div>
               <p
                 className="fs-secondary-heading fw-bold text-white"

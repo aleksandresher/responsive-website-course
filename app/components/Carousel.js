@@ -10,7 +10,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 const CarouselPage = () => {
   return (
-    <section className="carousel | padding-block-700 text-center">
+    <section className="carousel | padding-block-900 text-center">
       <h2 className="fs-secondary-heading fw-bold">What they’ve said</h2>
       <Swiper
         slidesPerView={3}

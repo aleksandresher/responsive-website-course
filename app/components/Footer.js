@@ -15,52 +15,44 @@ const Footer = () => {
   return (
     <footer className="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100">
       <div className="container">
-        <div className="primary-footer-wrapper">
-          <div className="primary-footer-logo-social">
-            <Link href="#">
-              <Image src={logo} alt="Manage" />
-            </Link>
-            <ul
-              role="social-list"
-              aria-label="social links"
-              className="flex gap-3"
-            >
-              <li>
-                <Link href="#" aria-label="facebook">
-                  <Image src={FB} alt="facebook logo" className="social-icon" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" aria-label="youtube">
-                  <Image src={YT} alt="youtube logo" className="social-icon" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" aria-label="twitter">
-                  <Image src={TW} alt="twitter logo" className="social-icon" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" aria-label="pinterest">
-                  <Image
-                    src={PT}
-                    alt="pinterest logo"
-                    className="social-icon"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" aria-label="instagram">
-                  <Image
-                    src={IN}
-                    alt="instagram logo"
-                    className="social-icon"
-                  />
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="primary-footer-nav">
+        <div className="primary-footer__wrapper">
+          {/* <div className="primary-footer-logo-social"> */}
+          <Link className="primary-footer__logo" href="#" aria-label="home">
+            <Image src={logo} alt="Manage" className="logo" />
+          </Link>
+          <ul
+            role="social-list"
+            aria-label="social links"
+            className="flex gap-3"
+          >
+            <li>
+              <Link href="#" aria-label="facebook">
+                <Image src={FB} alt="facebook logo" className="social-icon" />
+              </Link>
+            </li>
+            <li>
+              <Link href="#" aria-label="youtube">
+                <Image src={YT} alt="youtube logo" className="social-icon" />
+              </Link>
+            </li>
+            <li>
+              <Link href="#" aria-label="twitter">
+                <Image src={TW} alt="twitter logo" className="social-icon" />
+              </Link>
+            </li>
+            <li>
+              <Link href="#" aria-label="pinterest">
+                <Image src={PT} alt="pinterest logo" className="social-icon" />
+              </Link>
+            </li>
+            <li>
+              <Link href="#" aria-label="instagram">
+                <Image src={IN} alt="instagram logo" className="social-icon" />
+              </Link>
+            </li>
+          </ul>
+          {/* </div> */}
+          <div className="primary-footer__nav">
             <nav className="footer-nav">
               <ul
                 aria-label="Footer"
@@ -92,23 +84,25 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div className="primary-footer-form">
-            <form>
-              <input
-                type="email"
-                pattern="(v) =>
+          {/* <div className="primary-footer-form"> */}
+          <form className="primary-footer__form">
+            <input
+              type="email"
+              pattern="(v) =>
                 /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v)"
-                placeholder="Updates in your inbox..."
-                className="text-stone-950"
-                value={inputValue}
-                onChange={(event) => setInputValue(event.target.value)}
-              />
-              <button className="button">Go</button>
-            </form>
-            <p>Copyright 2020. All Rights Reserved</p>
-          </div>
+              placeholder="Updates in your inbox..."
+              className="text-stone-950"
+              value={inputValue}
+              onChange={(event) => setInputValue(event.target.value)}
+            />
+            <button className="button">Go</button>
+          </form>
+          <p className="primary-footer__copyright">
+            Copyright 2020. All Rights Reserved
+          </p>
         </div>
       </div>
+      {/* </div> */}
     </footer>
   );
 };
